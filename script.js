@@ -13,7 +13,7 @@ function parseWordDocxFile(inputElement) {
       .then(function (resultObject) {
         var div = document.createElement('div')
         div.innerHTML = resultObject.value
-        var headers = Array.from(div.querySelectorAll("h1, h2, h3, h4, h5, h6"))
+        var headers = Array.from(div.querySelectorAll("h2"))
         headers.forEach((header, i) => {
           var listViewItem = document.createElement('li');
           var a = document.createElement('a');
