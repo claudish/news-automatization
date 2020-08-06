@@ -32,7 +32,7 @@ function parseWordDocxFile(inputElement) {
           
         })
         document.getElementById("spistresci").innerHTML += div.innerHTML;
-        document.getElementById("spistresci").innerHTML += "\n" + `<div class="text-center"><a href="#" class="btn btn-primary btn-lg">TESKT</a></div>`;
+        document.getElementById("spistresci").innerHTML += "\n" + `<div class="text-center"><a href="#" class="btn btn-primary btn-lg">Sprawdź</a></div>`;
               document.getElementById("spistresci").innerHTML += "\n" + `<div class="similar-news">
 
         <div class="news-text-title">Polecane artykuły</div>
