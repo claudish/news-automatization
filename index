@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.4.8/mammoth.browser.min.js"></script>
+<input type="file" onchange="parseWordDocxFile(this)" />
+<div>
+  Select an Word .docx file and you will see the convert result:
+  <div>Headers:</div>
+ 
+  <div id="spistresci">
+    <div class="news-section">
+      <div class="cont-list xs-m-bottom">
+        <h2>Spis treści:</h2>
+        <ol>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <textarea  id="spis"></textarea>
+</div>
+
+
