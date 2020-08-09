@@ -35,7 +35,7 @@ function parseWordDocxFile(inputElement) {
 
 
                 for (var h2 of div.getElementsByTagName("p")) {
-                    if (h2.textContent.includes("h2 ")); {
+                    if (h2.textContent.includes("h2 ")) {
                         var header = document.createElement("h2");
                         header.textContent = h2.textContent.substr(4);
                         h2.replaceWith(header);
@@ -68,7 +68,7 @@ function parseWordDocxFile(inputElement) {
 
                 document.getElementById("spistresci").innerHTML += div.innerHTML;
                 document.getElementById("spistresci").innerHTML += "\n" + `<div class="text-center"><a href="#" class="btn btn-primary btn-lg">Sprawdź</a></div>`;
-                document.getElementById("spistresci").innerHTML += "\n" + `<div class="similar-news">
+             document.getElementById("spistresci").innerHTML += "\n" + `<div class="similar-news">
         <div class="news-text-title">Polecane artykuły</div>
         <div class="simnews-items" data-news-ids="7909,8164,8119">
             <!-- 1 -->
