@@ -36,9 +36,9 @@ function parseWordDocxFile(inputElement) {
 
                 for (var h2 of div.getElementsByTagName("p")) {
                     var regex = /[hH]2\: {1,}/;
-                    if (h2.textContent.match(regex) {
+                    if (h2.textContent.match(regex)) {
                         var header = document.createElement("h2");
-                        header.textContent = h2.textContent.replace(regex);
+                        header.textContent = h2.textContent.replace(regex, "");
                         h2.replaceWith(header);
                     }
                 }
