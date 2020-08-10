@@ -14,7 +14,7 @@ function parseWordDocxFile(inputElement) {
             .then(function(resultObject) {
                 var div = document.createElement('div')
                 div.innerHTML = resultObject.value
-
+                console.log(resultObject.value);
                 var h1s = div.getElementsByTagName("h1");
                 if (h1s.length === 1) {
                     h1s[0].remove();
@@ -35,9 +35,10 @@ function parseWordDocxFile(inputElement) {
 
 
                 for (var h2 of div.getElementsByTagName("p")) {
-                    if (h2.textContent.includes("h2:")) {
+                    var regex = /[hH]2\: {1,}/;
+                    if (h2.textContent.match(regex) {
                         var header = document.createElement("h2");
-                        header.textContent = h2.textContent.substr(4);
+                        header.textContent = h2.textContent.replace(regex);
                         h2.replaceWith(header);
                     }
                 }
@@ -69,8 +70,6 @@ function parseWordDocxFile(inputElement) {
           if (description.length > 0) {
          description[0].remove(); }
     
-          
-  
 
                 document.getElementById("spistresci").innerHTML += div.innerHTML;
                 document.getElementById("spistresci").innerHTML += "\n" + `<div class="text-center"><a href="#" class="btn btn-primary btn-lg">Sprawdź</a></div>`;
