@@ -42,6 +42,15 @@ function parseWordDocxFile(inputElement) {
                         h2.replaceWith(header);
                     }
                 }
+          
+           for (var h3 of div.getElementsByTagName("p")) {
+                    var regex = /[hH]3\: {1,}/;
+                    if (h3.textContent.match(regex)) {
+                        var header = document.createElement("h3");
+                        header.textContent = h3.textContent.replace(regex, "");
+                        h3.replaceWith(header);
+                    }
+                }
                 var links = div.getElementsByTagName("a");
                 for (var aa of links) {
                     if (aa.textContent === ""); {
