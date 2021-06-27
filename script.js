@@ -3,6 +3,7 @@ function prepareAnhorHref(title) {
    .normalize("NFD")
    .replace(/\p{Diacritic}/gu, "") // remove accents
    .toLowerCase()
+ .replace(/ł/g, 'l');
    .replace(/[^a-zA-Z0-9 ]/g, "") // remove special chars
    .replace(/ +(?= )/g,'') // remove double spaces
    .replace(/ /g, '_'); // spaces to under_score
